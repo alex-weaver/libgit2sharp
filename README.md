@@ -1,3 +1,23 @@
+# LibGit2Sharp-SSH-standard
+
+This is a fork of LibGit2Sharp, modified to support SSH on .NET Standard
+
+
+## Building the Nuget Package
+Preparation:
+1. first build the LibGit2Sharp-SSH-standard.NativeBinaries Nuget package: https://github.com/alex-weaver/libgit2sharp.nativebinaries
+1. edit nuget dependencies to include the correct version of LibGit2Sharp-SSH-standard.NativeBinaries
+2. set verion in version.json
+Run the following in powershell
+```
+dotnet restore
+dotnet pack -c Release
+```
+
+Note that on alpine linux the native binaries have a dependency on libcurl
+
+---
+The original readme for this package is included below:
 # LibGit2Sharp
 
 [![master azurepipelines][master-azurepipelines-badge]][master-azurepipelines]
